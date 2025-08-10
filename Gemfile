@@ -45,7 +45,27 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
+gem 'active_storage_validations'
+
+# Authentication
+gem 'devise'
+gem 'devise-jwt'
+
+# Authorization
+gem 'pundit'
+
+# Money handling
+gem 'money-rails'
+
+# Pagination
+gem 'pagy'
+
+# API versioning
+gem 'versionist'
+
+# Background jobs
+gem 'sidekiq'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -63,6 +83,8 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+
+  gem "pry"
 end
 
 group :test do
