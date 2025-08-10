@@ -28,7 +28,8 @@ module Api::V1
     end
 
     def show
-      render json: @product
+      @product = Product.includes(:reviews).find(params[:id])
+      render json: @product, include: [:reviews]
     end
 
     def create
